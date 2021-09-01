@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="stylesheet" href="/1617 clases Primer modulo/Clase 2/assets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Formularios</h1>
+    </header>
+
+    <main>
+        <h2>Completá el formulario para ser usuario</h2>
+        <p>Completando la inscripcion, te regalamos un michi</p>
+
+        <!-- label es lo que le da nombre a los input. input son los formularios rellenables -->
+        <!-- el label le da el foco,y si el input no esta adentro del label, se los relaciona usando el for, que tiene que coincidir con el id -->
+        <!--Mehotd GET da informacion en la barra de busqueda, post es anonimo por asi decirlo  -->
+
+        <form action="/" method="POST">
+
+            <!-- input text -->
+            <label for="nombre" class="input-label">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Carlitos" maxlength="22"/>
+
+            <!-- el id es unico e irrepetible -->
+            <label class="input-label">
+                Apellido:
+                <input type="text" id="apellido" placeholder="El gomero" maxlength="22" />
+            </label>
+
+            <br />
+            <br />
+
+            <!-- input password -->
+            <label class="input-label">Password
+                <input type="password" name="Password" id="Password" placeholder="pone una clave que solo vos sepas" />
+            </label>
+
+            <h3>Dejanos un mensaje!</h3>
+
+            <!-- textarea cajita de comentario -->
+            <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Qué opinás de nosotros?"></textarea>
+
+            <h3>Que comidas vas a querer?</h3>
+            <!-- input checkbox -->
+            <!-- Si el input checkbox esta dentro del label, el texto tambien es clickeable sino solo el cuadrito -->
+            <label class="input-label">
+                <input type="checkbox" name="desayuno" id="desayuno" value="desayuno" />
+                Desayuno
+            </label>
+
+            <label class="input-label">
+                <input type="checkbox" name="merienda" id="merienda" value="merienda" />
+                Merienda
+            </label>
+            <!-- cuando no tenemos stock lo deshabilitamos poniendo disabled-->
+            <input type="checkbox" name="cena" id="label" value="cena" disabled /> Cena
+
+            <!-- inputs radio -->
+            <!-- los name en un conjunto de radio tienen que coincidir para poder elegir cual marcar -->
+            <h3>Eligí cuánto donar!</h3>
+            <label" class="input-label">
+                <input type="radio" name="donacion" id="valor1" value="50">$50
+                </label>
+                <label>
+                    <input type="radio" name="donacion" id="valor2" value="100">$100
+                </label>
+                <label>
+                    <input type="radio" name="donacion" id="valor3" value="150" checked>$150
+                </label>
+
+                <!-- Select Unico -->
+                <h3>Elegi tu materia</h3>
+                <select name="materia" id="materia" class="Select">
+                    <option value="lengua">Lengua</option>
+                    <option value="matematica" selected>Matematica</option>
+                    <option value="programacion">programacion</option>
+                    <option value="geografia">geografia</option>
+                    <option value="ingles">ingles</option>
+                </select>
+
+                <!-- Select multiple-->
+                <h3>Elegi tus materias</h3>
+                <select name="materias" id="materias" multiple ; class="select-class">
+                    <option value="lengua">Lengua</option>
+                    <option value="matematica" selected>Matematica</option>
+                    <option value="programacion">programacion</option>
+                    <option value="geografia">geografia</option>
+                    <option value="ingles">ingles</option>
+                </select>
+
+                <!-- Atributo ''selected'', para dejar marcada una materia por defecto -->
+
+                <!-- file upload -->
+                <h3>Subi tu foto!</h3>
+                <input type="file" name="fotito" id="foto" accept="img/*, audio/*" class="pic">
+
+                <h3>Decinos tu cumpleaños!</h3>
+                <label>Contanos cuando cumplis años:
+                    <input type="date" name="birthday" id="birthday" class="">
+                </label>
+
+                <h3>Ahora envianos tus datos</h3>
+                <!-- envio de los datos del formulario -->
+                <input type="submit" name="submit" id="submit" value="Enviar" class="submit">
+
+        </form>
+    </main>
+</body>
+
+</html>
